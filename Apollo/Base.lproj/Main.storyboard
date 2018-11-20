@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7kI-2m-I0z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Apollo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-dO-Ywl">
+                                <rect key="frame" x="92" y="318.5" width="191" height="30"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.74117647058823533" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1va-vw-N6v"/>
+                                    <constraint firstAttribute="width" constant="191" id="hvu-bu-m3K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="LOGIN WITH SPOTIFY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfR-Ek-Cgz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBS-Rp-9b5">
+                                <rect key="frame" x="129.5" y="134" width="116" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VHd-CL-Awh"/>
+                                </constraints>
+                                <string key="text">playing "Snow" 
+, </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wrote action to Firebase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWQ-e5-OQd">
+                                <rect key="frame" x="95.5" y="172" width="184" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jvt-1y-1re"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cWQ-e5-OQd" firstAttribute="top" secondItem="OBS-Rp-9b5" secondAttribute="bottom" constant="8" id="1XB-UI-h1s"/>
+                            <constraint firstItem="WEf-dO-Ywl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Srb-cx-oTH"/>
+                            <constraint firstItem="WEf-dO-Ywl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gUu-kl-mWT"/>
+                            <constraint firstItem="OBS-Rp-9b5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6t-jI-Bc1"/>
+                            <constraint firstItem="cWQ-e5-OQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZU-N7-D5H"/>
+                            <constraint firstItem="OBS-Rp-9b5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="ukw-4n-dwH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firebaseLabel" destination="cWQ-e5-OQd" id="uKa-AS-txA"/>
+                        <outlet property="loginButton" destination="WEf-dO-Ywl" id="i7R-gq-iX9"/>
+                        <outlet property="playingSongLabel" destination="OBS-Rp-9b5" id="UYh-wG-2Wc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="124"/>
+        </scene>
+        <!--User Type View Controller-->
+        <scene sceneID="VAY-Et-uea">
+            <objects>
+                <viewController id="7kI-2m-I0z" customClass="UserTypeViewController" customModule="Apollo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tm6-EQ-vli"/>
+                        <viewControllerLayoutGuide type="bottom" id="1XR-kv-tMx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UGW-Gg-DQA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apollo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOi-0e-nhP">
+                                <rect key="frame" x="152" y="65" width="71.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNO-mU-R5d">
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apollo_icon_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-C8-zH2">
+                                <rect key="frame" x="67.5" y="104.5" width="240" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="hUS-MD-Jjv"/>
+                                    <constraint firstAttribute="height" constant="150" id="o3e-hE-gfs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-EE-H93">
+                                <rect key="frame" x="160" y="361" width="55" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="selectButtonPressed:" destination="7kI-2m-I0z" eventType="touchUpInside" id="PwB-Qr-lHI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qRp-C8-zH2" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="6Nk-EN-qbe"/>
+                            <constraint firstItem="VNO-mU-R5d" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="Cwn-U4-pNx"/>
+                            <constraint firstItem="VNO-mU-R5d" firstAttribute="centerY" secondItem="UGW-Gg-DQA" secondAttribute="centerY" id="SGU-Xd-QZ5"/>
+                            <constraint firstItem="VNO-mU-R5d" firstAttribute="centerY" secondItem="UGW-Gg-DQA" secondAttribute="centerY" id="TZ5-Gv-hbK"/>
+                            <constraint firstItem="uV0-EE-H93" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="Tfa-8H-UY1"/>
+                            <constraint firstItem="qRp-C8-zH2" firstAttribute="top" secondItem="xOi-0e-nhP" secondAttribute="bottom" constant="8" id="WmA-Co-XQb"/>
+                            <constraint firstItem="xOi-0e-nhP" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="b7Y-f5-0gT"/>
+                            <constraint firstItem="VNO-mU-R5d" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="fha-GR-PKV"/>
+                            <constraint firstItem="xOi-0e-nhP" firstAttribute="top" secondItem="Tm6-EQ-vli" secondAttribute="bottom" constant="45" id="ss6-Co-rDU"/>
+                            <constraint firstItem="1XR-kv-tMx" firstAttribute="top" secondItem="uV0-EE-H93" secondAttribute="bottom" constant="270" id="x0o-wd-duN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectButton" destination="uV0-EE-H93" id="3ZE-Mv-7kA"/>
+                        <outlet property="userTypePickerView" destination="VNO-mU-R5d" id="F11-A2-DZF"/>
+                        <segue destination="wGE-32-Tmn" kind="show" identifier="createRoomSegue" id="db9-h3-Y9t"/>
+                        <segue destination="yYZ-1v-Xmt" kind="show" identifier="joinRoomSegue" id="lki-2j-HXy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tov-eH-fO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="841"/>
+        </scene>
+        <!--Create Room View Controller-->
+        <scene sceneID="pkw-Je-9sp">
+            <objects>
+                <viewController id="wGE-32-Tmn" customClass="CreateRoomViewController" customModule="Apollo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUU-tr-8MM"/>
+                        <viewControllerLayoutGuide type="bottom" id="zYu-Kn-Cq5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgE-qU-97d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JU9-NA-4OI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Apollo" id="ean-tK-uty">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="c5e-fW-SUC">
+                                            <connections>
+                                                <segue destination="7kI-2m-I0z" kind="show" id="OXb-LG-odC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlB-aB-wAC">
+                                <rect key="frame" x="62.5" y="353.5" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="GGY-aE-TtE"/>
+                                    <constraint firstAttribute="height" constant="35" id="V65-8z-j92"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" destination="yYZ-1v-Xmt" eventType="valueChanged" id="MXq-gy-I11"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter alias: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGO-vT-8P6">
+                                <rect key="frame" x="138" y="321.5" width="99.5" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW3-Oz-bhw">
+                                <rect key="frame" x="130.5" y="413.5" width="114" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Create Room"/>
+                                <connections>
+                                    <action selector="createRoomButtonPressed:" destination="wGE-32-Tmn" eventType="touchUpInside" id="pdX-uK-iw3"/>
+                                    <action selector="joinRoomButtonPressed:" destination="yYZ-1v-Xmt" eventType="touchUpInside" id="pa5-KI-Zkk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Room Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sj8-Kd-BpS">
+                                <rect key="frame" x="62.5" y="261.5" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4lc-pt-Ktt"/>
+                                    <constraint firstAttribute="height" constant="35" id="zu4-yl-4cP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter room code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVs-tz-w3p">
+                                <rect key="frame" x="113.5" y="229.5" width="148" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Room Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vu-MG-ihW">
+                                <rect key="frame" x="62.5" y="169.5" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Uqs-kd-tPQ"/>
+                                    <constraint firstAttribute="width" constant="250" id="pGC-VC-vjr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter room name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFD-lU-J67">
+                                <rect key="frame" x="111" y="137.5" width="153" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JU9-NA-4OI" firstAttribute="leading" secondItem="fgE-qU-97d" secondAttribute="leading" id="6Ac-nG-m1E"/>
+                            <constraint firstItem="VVs-tz-w3p" firstAttribute="top" secondItem="1vu-MG-ihW" secondAttribute="bottom" constant="25" id="ABu-np-nrF"/>
+                            <constraint firstItem="Sj8-Kd-BpS" firstAttribute="top" secondItem="VVs-tz-w3p" secondAttribute="bottom" constant="8" id="F8n-KL-a2p"/>
+                            <constraint firstItem="XFD-lU-J67" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="IHm-da-3Kh"/>
+                            <constraint firstItem="1vu-MG-ihW" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="Wnz-ve-ng7"/>
+                            <constraint firstItem="JU9-NA-4OI" firstAttribute="top" secondItem="xUU-tr-8MM" secondAttribute="bottom" id="Zb1-9w-TYh"/>
+                            <constraint firstItem="VVs-tz-w3p" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="cTs-ad-of4"/>
+                            <constraint firstItem="xGO-vT-8P6" firstAttribute="top" secondItem="Sj8-Kd-BpS" secondAttribute="bottom" constant="25" id="fMR-9C-R36"/>
+                            <constraint firstItem="xGO-vT-8P6" firstAttribute="centerY" secondItem="fgE-qU-97d" secondAttribute="centerY" id="jYY-nd-H1K"/>
+                            <constraint firstItem="1vu-MG-ihW" firstAttribute="top" secondItem="XFD-lU-J67" secondAttribute="bottom" constant="8" id="jbA-zY-dTU"/>
+                            <constraint firstAttribute="trailing" secondItem="JU9-NA-4OI" secondAttribute="trailing" id="l2v-bT-sJg"/>
+                            <constraint firstItem="Sj8-Kd-BpS" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="lNJ-ZI-GRd"/>
+                            <constraint firstItem="vW3-Oz-bhw" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="uBG-KG-EFr"/>
+                            <constraint firstItem="vW3-Oz-bhw" firstAttribute="top" secondItem="HlB-aB-wAC" secondAttribute="bottom" constant="25" id="vpK-fg-1UI"/>
+                            <constraint firstItem="xGO-vT-8P6" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="vxG-4B-Ubb"/>
+                            <constraint firstItem="HlB-aB-wAC" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="wO7-gh-UzJ"/>
+                            <constraint firstItem="JU9-NA-4OI" firstAttribute="centerX" secondItem="fgE-qU-97d" secondAttribute="centerX" id="x2h-OP-m3X"/>
+                            <constraint firstItem="HlB-aB-wAC" firstAttribute="top" secondItem="xGO-vT-8P6" secondAttribute="bottom" constant="8" id="yeJ-OZ-rVf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aliasTextField" destination="HlB-aB-wAC" id="sYD-Hj-fQE"/>
+                        <outlet property="createRoomButton" destination="vW3-Oz-bhw" id="JsO-IB-Ngo"/>
+                        <outlet property="roomCodeTextField" destination="Sj8-Kd-BpS" id="gX2-Rw-lAg"/>
+                        <outlet property="roomNameTextField" destination="1vu-MG-ihW" id="tct-uC-ue4"/>
+                        <segue destination="TMX-MT-nDs" kind="show" identifier="roomOwnerSegue" id="hct-sK-NBG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aW-fz-9Cp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589.60000000000002" y="840.62968515742136"/>
+        </scene>
+        <!--Playlist View Controller-->
+        <scene sceneID="sTu-Vi-6pH">
+            <objects>
+                <viewController id="TMX-MT-nDs" customClass="PlaylistViewController" customModule="Apollo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="afe-RQ-bV2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ntx-uT-COS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Wc-1w-6ji">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7y-qV-j8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="841"/>
+        </scene>
+        <!--Join Room View Controller-->
+        <scene sceneID="wVu-f4-JuQ">
+            <objects>
+                <viewController id="yYZ-1v-Xmt" customClass="JoinRoomViewController" customModule="Apollo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MA4-sB-Vrn"/>
+                        <viewControllerLayoutGuide type="bottom" id="usE-Mp-ZvA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OH3-Ww-pcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="duz-Us-muf">
+                                <rect key="frame" x="62.5" y="316" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Tfx-f0-Ach"/>
+                                    <constraint firstAttribute="width" constant="250" id="d3T-sB-VZL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter alias: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXa-JI-gxK">
+                                <rect key="frame" x="138" y="284" width="99.5" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFk-ay-waY">
+                                <rect key="frame" x="141.5" y="376" width="92" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Join Room"/>
+                                <connections>
+                                    <action selector="joinRoomButtonPressed:" destination="yYZ-1v-Xmt" eventType="touchUpInside" id="16G-ng-C49"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-WD-VeI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Apollo" id="Poy-Mz-d6a">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="6bX-Bo-nUQ">
+                                            <connections>
+                                                <segue destination="7kI-2m-I0z" kind="show" id="Kl6-gv-qZ5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Room Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moH-cQ-jLt">
+                                <rect key="frame" x="62.5" y="224" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="B3f-IF-kfj"/>
+                                    <constraint firstAttribute="width" constant="250" id="w6g-LV-tAf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter room code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-05-3E2">
+                                <rect key="frame" x="116" y="192" width="143" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gFk-ay-waY" firstAttribute="top" secondItem="duz-Us-muf" secondAttribute="bottom" constant="25" id="0pB-Aq-jBB"/>
+                            <constraint firstItem="vXa-JI-gxK" firstAttribute="top" secondItem="moH-cQ-jLt" secondAttribute="bottom" constant="25" id="2AG-6a-7sf"/>
+                            <constraint firstAttribute="trailing" secondItem="lzV-WD-VeI" secondAttribute="trailing" id="AOR-os-2Zi"/>
+                            <constraint firstItem="lzV-WD-VeI" firstAttribute="leading" secondItem="OH3-Ww-pcd" secondAttribute="leading" id="ICH-BA-uaL"/>
+                            <constraint firstItem="duz-Us-muf" firstAttribute="centerY" secondItem="OH3-Ww-pcd" secondAttribute="centerY" id="IEw-SL-q4V"/>
+                            <constraint firstItem="lzV-WD-VeI" firstAttribute="centerX" secondItem="OH3-Ww-pcd" secondAttribute="centerX" id="IeP-ac-4ff"/>
+                            <constraint firstItem="duz-Us-muf" firstAttribute="top" secondItem="vXa-JI-gxK" secondAttribute="bottom" constant="8" id="PvY-2j-hu3"/>
+                            <constraint firstItem="gFk-ay-waY" firstAttribute="centerX" secondItem="OH3-Ww-pcd" secondAttribute="centerX" id="UuU-dn-uPc"/>
+                            <constraint firstItem="vXa-JI-gxK" firstAttribute="centerX" secondItem="OH3-Ww-pcd" secondAttribute="centerX" id="cFb-II-jkO"/>
+                            <constraint firstItem="lzV-WD-VeI" firstAttribute="top" secondItem="MA4-sB-Vrn" secondAttribute="bottom" id="nXV-F2-0EX"/>
+                            <constraint firstItem="8Gg-05-3E2" firstAttribute="centerX" secondItem="OH3-Ww-pcd" secondAttribute="centerX" id="nhd-O9-JXw"/>
+                            <constraint firstItem="duz-Us-muf" firstAttribute="centerX" secondItem="OH3-Ww-pcd" secondAttribute="centerX" id="pKf-Mk-reu"/>
+                            <constraint firstItem="moH-cQ-jLt" firstAttribute="centerX" secondItem="OH3-Ww-pcd" secondAttribute="centerX" id="scY-LH-lhK"/>
+                            <constraint firstItem="moH-cQ-jLt" firstAttribute="top" secondItem="8Gg-05-3E2" secondAttribute="bottom" constant="8" id="zLt-sX-iRb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aliasTextField" destination="duz-Us-muf" id="TQs-xT-P2C"/>
+                        <outlet property="joinRoomButton" destination="gFk-ay-waY" id="hl9-vm-CCn"/>
+                        <outlet property="roomCodeTextField" destination="moH-cQ-jLt" id="AbL-e3-mFz"/>
+                        <segue destination="TMX-MT-nDs" kind="show" identifier="roomGuestSegue" id="Fk0-VQ-eok"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExY-lg-zjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589.60000000000002" y="1504.4977511244379"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apollo_icon_black.png" width="1568" height="1864"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fk0-VQ-eok"/>
+        <segue reference="Kl6-gv-qZ5"/>
+    </inferredMetricsTieBreakers>
+</document>
