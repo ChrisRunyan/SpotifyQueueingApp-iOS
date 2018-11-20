@@ -3,7 +3,7 @@
 //  Apollo
 //
 //  Created by Christopher Runyan on 11/20/18.
-//  Copyright © 2018 Elon Rubin. All rights reserved.
+//  Copyright © 2018 Christopher Runyan. All rights reserved.
 //
 
 import Foundation
