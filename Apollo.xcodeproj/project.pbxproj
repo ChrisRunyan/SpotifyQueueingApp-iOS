@@ -22,7 +22,7 @@
 		75C978FCF33EB117BCE3239C /* Pods_ApolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7583EA0706323D07FF23FA4C /* Pods_ApolloUITests.framework */; };
 		D7C8944C53C06B75603D3668 /* Pods_ApolloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA2D50F2D852A0F9F37B66D /* Pods_ApolloTests.framework */; };
 		EF34844D1E55D5BA007F7453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34844C1E55D5BA007F7453 /* AppDelegate.swift */; };
-		EF34844F1E55D5BA007F7453 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34844E1E55D5BA007F7453 /* MainViewController.swift */; };
+		EF34844F1E55D5BA007F7453 /* SpotifyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34844E1E55D5BA007F7453 /* SpotifyLoginViewController.swift */; };
 		EF3484521E55D5BA007F7453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3484501E55D5BA007F7453 /* Main.storyboard */; };
 		EF3484541E55D5BA007F7453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3484531E55D5BA007F7453 /* Assets.xcassets */; };
 		EF3484571E55D5BA007F7453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3484551E55D5BA007F7453 /* LaunchScreen.storyboard */; };
@@ -73,7 +73,7 @@
 		E4AC5D8FAB7EE46520BAB5F6 /* Pods-ApolloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApolloUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApolloUITests/Pods-ApolloUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF3484491E55D5BA007F7453 /* Apollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apollo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF34844C1E55D5BA007F7453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF34844E1E55D5BA007F7453 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EF34844E1E55D5BA007F7453 /* SpotifyLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginViewController.swift; sourceTree = "<group>"; };
 		EF3484511E55D5BA007F7453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF3484531E55D5BA007F7453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF3484561E55D5BA007F7453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -177,12 +177,12 @@
 				45747D4B218F78DF00C02E47 /* UserTypeViewController.swift */,
 				45CE983021925CA800630DF1 /* CreateRoomViewController.swift */,
 				45CE983221925CC700630DF1 /* JoinRoomViewController.swift */,
+				EF34844E1E55D5BA007F7453 /* SpotifyLoginViewController.swift */,
 				45CE0B0621A4CAB800E04901 /* PlaylistViewController.swift */,
 				EF3484501E55D5BA007F7453 /* Main.storyboard */,
 				45CE0B0821A4CFB100E04901 /* FirebaseHelper.swift */,
 				45CE0B0A21A4CFC200E04901 /* SpotifyHelper.swift */,
 				EF3484531E55D5BA007F7453 /* Assets.xcassets */,
-				EF34844E1E55D5BA007F7453 /* MainViewController.swift */,
 				EF3484551E55D5BA007F7453 /* LaunchScreen.storyboard */,
 				EF3484581E55D5BA007F7453 /* Info.plist */,
 				45BFE66B21854F7600CBD508 /* GoogleService-Info.plist */,
@@ -465,7 +465,7 @@
 			files = (
 				45CE0B0921A4CFB100E04901 /* FirebaseHelper.swift in Sources */,
 				45CE0B0B21A4CFC200E04901 /* SpotifyHelper.swift in Sources */,
-				EF34844F1E55D5BA007F7453 /* MainViewController.swift in Sources */,
+				EF34844F1E55D5BA007F7453 /* SpotifyLoginViewController.swift in Sources */,
 				EF34844D1E55D5BA007F7453 /* AppDelegate.swift in Sources */,
 				45CE0B0721A4CAB800E04901 /* PlaylistViewController.swift in Sources */,
 				45747D48218F76DC00C02E47 /* UserTypePickerDelegate.swift in Sources */,

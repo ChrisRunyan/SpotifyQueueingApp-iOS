@@ -13,7 +13,7 @@ import SafariServices
 import AVFoundation
 import FirebaseDatabase
 
-class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
+class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     var auth = SPTAuth.defaultInstance()!
     var session:SPTSession!
     
@@ -21,17 +21,12 @@ class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     var loginUrl: URL?
     
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var playingSongLabel: UILabel!
-    @IBOutlet weak var firebaseLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playingSongLabel.isHidden = true
-        firebaseLabel.isHidden = true
-        
         setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.updateAfterFirstLogin), name: NSNotification.Name(rawValue: "loginSuccessfull"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SpotifyLoginViewController.updateAfterFirstLogin), name: NSNotification.Name(rawValue: "loginSuccessfull"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,8 +54,6 @@ class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     
     @objc func updateAfterFirstLogin () {
         loginButton.isHidden = true
-        playingSongLabel.isHidden = false
-        firebaseLabel.isHidden = false
         
         writeToDB()
         

@@ -11,6 +11,7 @@ import UIKit
 class PlaylistViewController: UIViewController {
     // if owner, allow playback through Spotify
     // if guest, just edit Firebase database
+    // back button goes back to create/join, based off where it came from previously
     
     var roomType = String()
     

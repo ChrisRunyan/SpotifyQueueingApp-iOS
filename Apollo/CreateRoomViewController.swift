@@ -10,6 +10,8 @@ import UIKit
 
 class CreateRoomViewController: UIViewController {
     // create room button grayed out until all valid data entered
+    // login with Spotify popup message instead of segue
+    // forward button once Spotify login that lets fast forward logging into Spotify account
     
     @IBOutlet weak var roomNameTextField: UITextField!
     @IBOutlet weak var roomCodeTextField: UITextField!
@@ -22,8 +24,12 @@ class CreateRoomViewController: UIViewController {
     }
 
     @IBAction func createRoomButtonPressed(_ sender: Any) {
-        // attempt to login to Spotify 
+        // verify room does not exist
+        
         // attempt to add room to Firebase
+        
+        // attempt to login to Spotify
+//        self.performSegue(withIdentifier: "spotifyLoginSegue", sender: nil)
         
         self.performSegue(withIdentifier: "roomOwnerSegue", sender: nil)
     }

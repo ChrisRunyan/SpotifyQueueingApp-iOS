@@ -7,11 +7,19 @@
 //
 
 import Foundation
+import SafariServices
+import AVFoundation
 
-class SpotifyHelper {
-    // login to Spotify
-    
-    // play song given song ID
-    
-    // pause song given song ID
-}
+//class SpotifyHelper: SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
+//    var auth = SPTAuth.defaultInstance()!
+//    var session:SPTSession!
+//    
+//    var player: SPTAudioStreamingController?
+//    var loginUrl: URL?
+//    
+//    // login to Spotify
+//    
+//    // play song given song ID
+//    
+//    // pause song given song ID
+//}
