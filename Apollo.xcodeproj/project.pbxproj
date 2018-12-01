@@ -10,14 +10,15 @@
 		45747D48218F76DC00C02E47 /* UserTypePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45747D47218F76DC00C02E47 /* UserTypePickerDelegate.swift */; };
 		45747D4C218F78DF00C02E47 /* UserTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45747D4B218F78DF00C02E47 /* UserTypeViewController.swift */; };
 		45BFE66A218548F100CBD508 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45BFE669218548F100CBD508 /* Default-568h@2x.png */; };
-		45BFE66C21854F7600CBD508 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45BFE66B21854F7600CBD508 /* GoogleService-Info.plist */; };
 		45CE0B0721A4CAB800E04901 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0B0621A4CAB800E04901 /* PlaylistViewController.swift */; };
 		45CE0B0921A4CFB100E04901 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0B0821A4CFB100E04901 /* FirebaseHelper.swift */; };
 		45CE0B0B21A4CFC200E04901 /* SpotifyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0B0A21A4CFC200E04901 /* SpotifyHelper.swift */; };
+		45CE0B0D21A5CB3300E04901 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45CE0B0C21A5CB3300E04901 /* GoogleService-Info.plist */; };
 		45CE982E2192597300630DF1 /* apollo_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 45CE982C2192597300630DF1 /* apollo_icon_white.png */; };
 		45CE982F2192597300630DF1 /* apollo_icon_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 45CE982D2192597300630DF1 /* apollo_icon_black.png */; };
 		45CE983121925CA800630DF1 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE983021925CA800630DF1 /* CreateRoomViewController.swift */; };
 		45CE983321925CC700630DF1 /* JoinRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE983221925CC700630DF1 /* JoinRoomViewController.swift */; };
+		45D6143621B269920005B094 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6143521B269920005B094 /* Room.swift */; };
 		57975F58818209C8CBD3B08C /* Pods_Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE25EA521A27ED68B93A463 /* Pods_Apollo.framework */; };
 		75C978FCF33EB117BCE3239C /* Pods_ApolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7583EA0706323D07FF23FA4C /* Pods_ApolloUITests.framework */; };
 		D7C8944C53C06B75603D3668 /* Pods_ApolloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA2D50F2D852A0F9F37B66D /* Pods_ApolloTests.framework */; };
@@ -55,14 +56,15 @@
 		45747D47218F76DC00C02E47 /* UserTypePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypePickerDelegate.swift; sourceTree = "<group>"; };
 		45747D4B218F78DF00C02E47 /* UserTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeViewController.swift; sourceTree = "<group>"; };
 		45BFE669218548F100CBD508 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		45BFE66B21854F7600CBD508 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45CE0B0621A4CAB800E04901 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		45CE0B0821A4CFB100E04901 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		45CE0B0A21A4CFC200E04901 /* SpotifyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHelper.swift; sourceTree = "<group>"; };
+		45CE0B0C21A5CB3300E04901 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45CE982C2192597300630DF1 /* apollo_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apollo_icon_white.png; path = ../../Icons/apollo_icon_white.png; sourceTree = "<group>"; };
 		45CE982D2192597300630DF1 /* apollo_icon_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apollo_icon_black.png; path = ../../Icons/apollo_icon_black.png; sourceTree = "<group>"; };
 		45CE983021925CA800630DF1 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		45CE983221925CC700630DF1 /* JoinRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomViewController.swift; sourceTree = "<group>"; };
+		45D6143521B269920005B094 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		5BDA37E099A6C929BCB3AA4B /* Pods-Apollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apollo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apollo/Pods-Apollo.release.xcconfig"; sourceTree = "<group>"; };
 		7583EA0706323D07FF23FA4C /* Pods_ApolloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApolloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA2D50F2D852A0F9F37B66D /* Pods_ApolloTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApolloTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,10 +184,11 @@
 				EF3484501E55D5BA007F7453 /* Main.storyboard */,
 				45CE0B0821A4CFB100E04901 /* FirebaseHelper.swift */,
 				45CE0B0A21A4CFC200E04901 /* SpotifyHelper.swift */,
+				45D6143521B269920005B094 /* Room.swift */,
 				EF3484531E55D5BA007F7453 /* Assets.xcassets */,
 				EF3484551E55D5BA007F7453 /* LaunchScreen.storyboard */,
+				45CE0B0C21A5CB3300E04901 /* GoogleService-Info.plist */,
 				EF3484581E55D5BA007F7453 /* Info.plist */,
-				45BFE66B21854F7600CBD508 /* GoogleService-Info.plist */,
 				EF3484811E55D686007F7453 /* Apollo-Bridging-Header.h */,
 				45747D47218F76DC00C02E47 /* UserTypePickerDelegate.swift */,
 			);
@@ -339,11 +342,11 @@
 			files = (
 				EF3484571E55D5BA007F7453 /* LaunchScreen.storyboard in Resources */,
 				45BFE66A218548F100CBD508 /* Default-568h@2x.png in Resources */,
-				45BFE66C21854F7600CBD508 /* GoogleService-Info.plist in Resources */,
 				45CE982F2192597300630DF1 /* apollo_icon_black.png in Resources */,
 				45CE982E2192597300630DF1 /* apollo_icon_white.png in Resources */,
 				EF3484541E55D5BA007F7453 /* Assets.xcassets in Resources */,
 				EF3484521E55D5BA007F7453 /* Main.storyboard in Resources */,
+				45CE0B0D21A5CB3300E04901 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +470,7 @@
 				45CE0B0B21A4CFC200E04901 /* SpotifyHelper.swift in Sources */,
 				EF34844F1E55D5BA007F7453 /* SpotifyLoginViewController.swift in Sources */,
 				EF34844D1E55D5BA007F7453 /* AppDelegate.swift in Sources */,
+				45D6143621B269920005B094 /* Room.swift in Sources */,
 				45CE0B0721A4CAB800E04901 /* PlaylistViewController.swift in Sources */,
 				45747D48218F76DC00C02E47 /* UserTypePickerDelegate.swift in Sources */,
 				45747D4C218F78DF00C02E47 /* UserTypeViewController.swift in Sources */,

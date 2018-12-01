@@ -11,7 +11,7 @@
 import UIKit
 import SafariServices
 import AVFoundation
-import FirebaseDatabase
+//import FirebaseDatabase
 
 class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     var auth = SPTAuth.defaultInstance()!
@@ -55,7 +55,7 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
     @objc func updateAfterFirstLogin () {
         loginButton.isHidden = true
         
-        writeToDB()
+//        writeToDB()
         
         let userDefaults = UserDefaults.standard
         
@@ -70,19 +70,19 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
         }
     }
     
-    func writeToDB() {
-        let date = Date()
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        let timeStamp = String(hour) + ":" + String(minutes)
-        
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        
-        ref.child("song_3").setValue("snow")
-        ref.child("time_3").setValue(timeStamp)
-    }
+//    func writeToDB() {
+//        let date = Date()
+//        let calendar = Calendar.current
+//        let hour = calendar.component(.hour, from: date)
+//        let minutes = calendar.component(.minute, from: date)
+//        let timeStamp = String(hour) + ":" + String(minutes)
+//
+//        var ref: DatabaseReference!
+//        ref = Database.database().reference()
+//        
+//        ref.child("song_3").setValue("snow")
+//        ref.child("time_3").setValue(timeStamp)
+//    }
     
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
        print("logged in")

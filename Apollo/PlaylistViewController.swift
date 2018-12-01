@@ -14,6 +14,7 @@ class PlaylistViewController: UIViewController {
     // back button goes back to create/join, based off where it came from previously
     
     var roomType = String()
+    var roomID = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()

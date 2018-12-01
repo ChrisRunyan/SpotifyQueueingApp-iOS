@@ -98,7 +98,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-EE-H93">
-                                <rect key="frame" x="160" y="361" width="55" height="36"/>
+                                <rect key="frame" x="160" y="384.5" width="55" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Select"/>
                                 <connections>
@@ -110,6 +110,7 @@
                         <constraints>
                             <constraint firstItem="qRp-C8-zH2" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="6Nk-EN-qbe"/>
                             <constraint firstItem="VNO-mU-R5d" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="Cwn-U4-pNx"/>
+                            <constraint firstItem="uV0-EE-H93" firstAttribute="top" secondItem="qRp-C8-zH2" secondAttribute="bottom" constant="130" id="DMF-Ld-2uY"/>
                             <constraint firstItem="VNO-mU-R5d" firstAttribute="centerY" secondItem="UGW-Gg-DQA" secondAttribute="centerY" id="SGU-Xd-QZ5"/>
                             <constraint firstItem="VNO-mU-R5d" firstAttribute="centerY" secondItem="UGW-Gg-DQA" secondAttribute="centerY" id="TZ5-Gv-hbK"/>
                             <constraint firstItem="uV0-EE-H93" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="Tfa-8H-UY1"/>
@@ -117,7 +118,6 @@
                             <constraint firstItem="xOi-0e-nhP" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="b7Y-f5-0gT"/>
                             <constraint firstItem="VNO-mU-R5d" firstAttribute="centerX" secondItem="UGW-Gg-DQA" secondAttribute="centerX" id="fha-GR-PKV"/>
                             <constraint firstItem="xOi-0e-nhP" firstAttribute="top" secondItem="Tm6-EQ-vli" secondAttribute="bottom" constant="45" id="ss6-Co-rDU"/>
-                            <constraint firstItem="1XR-kv-tMx" firstAttribute="top" secondItem="uV0-EE-H93" secondAttribute="bottom" constant="270" id="x0o-wd-duN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -410,7 +410,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hct-sK-NBG"/>
-        <segue reference="5Nk-NV-sMK"/>
+        <segue reference="db9-h3-Y9t"/>
         <segue reference="OXb-LG-odC"/>
     </inferredMetricsTieBreakers>
 </document>
