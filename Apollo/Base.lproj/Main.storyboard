@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="WEf-dO-Ywl" id="i7R-gq-iX9"/>
+                        <segue destination="wGE-32-Tmn" kind="show" identifier="spotifyLoggedInSegue" id="7DP-8S-QrL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -272,21 +273,37 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Apollo" id="fy8-Vh-96L">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="M1G-Ov-TMU"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="M1G-Ov-TMU">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="TMX-MT-nDs" id="vyU-5q-Ylr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Refresh" id="GO7-FZ-jOh">
+                                                <connections>
+                                                    <action selector="refreshButtonPressed:" destination="TMX-MT-nDs" id="S5K-EP-0iC"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" id="qEe-rj-C6t">
+                                                <connections>
+                                                    <action selector="playPauseButtonPressed:" destination="TMX-MT-nDs" id="MEO-74-abi"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ror-G1-sDO">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </scrollView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-kq-uB9">
+                            <tabBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-kq-uB9">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="qY3-zH-EW4"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem title="Playlist" id="wMC-lp-nu8" userLabel="Playlist"/>
+                                    <tabBarItem title="Playlist" image="apollo_icon_gray_small.png" landscapeImage="Default.png" selectedImage="Default.png" id="wMC-lp-nu8" userLabel="Playlist"/>
                                     <tabBarItem systemItem="search" id="BLK-YQ-d0X" userLabel="Search"/>
                                     <tabBarItem systemItem="more" id="aDm-AG-A7m"/>
                                 </items>
@@ -304,6 +321,13 @@
                             <constraint firstItem="Ror-G1-sDO" firstAttribute="top" secondItem="1iq-qJ-Hom" secondAttribute="bottom" id="stB-6S-U5A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="qEe-rj-C6t" id="CGn-RS-ZIi"/>
+                        <outlet property="refreshButton" destination="GO7-FZ-jOh" id="dzx-RJ-hyT"/>
+                        <outlet property="scrollView" destination="Ror-G1-sDO" id="Ls2-Tb-Fsk"/>
+                        <segue destination="wGE-32-Tmn" kind="show" identifier="backToCreateRoomSegue" id="dDx-vt-g5U"/>
+                        <segue destination="yYZ-1v-Xmt" kind="show" identifier="backToJoinRoomSegue" id="Dii-qm-boA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7y-qV-j8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -406,11 +430,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Default.png" width="320" height="568"/>
         <image name="apollo_icon_black.png" width="1568" height="1864"/>
+        <image name="apollo_icon_gray_small.png" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Dii-qm-boA"/>
         <segue reference="hct-sK-NBG"/>
-        <segue reference="db9-h3-Y9t"/>
+        <segue reference="dDx-vt-g5U"/>
         <segue reference="OXb-LG-odC"/>
     </inferredMetricsTieBreakers>
 </document>

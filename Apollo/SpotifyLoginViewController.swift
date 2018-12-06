@@ -20,6 +20,8 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
     var player: SPTAudioStreamingController?
     var loginUrl: URL?
     
+    var room = Room()
+    
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
 
     func setup () {
         let redirectURL = "Apollo://returnAfterLogin"
-        let clientID = "" // insert clientID here 
+        let clientID = "557e689d80c747afa78e8a9e34e0b854" // insert clientID here
         auth.redirectURL     = URL(string: redirectURL)
         auth.clientID        = clientID
         auth.requestedScopes = [SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistModifyPrivateScope]
@@ -68,21 +70,12 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
             initializaPlayer(authSession: session)
             self.loginButton.isHidden = true
         }
+        
+        print("**access token in Spotify: ", self.session.accessToken)
+        print("**refresh token in Spotify: ", self.session.encryptedRefreshToken)
+        
+        self.performSegue(withIdentifier: "spotifyLoggedInSegue", sender: nil)
     }
-    
-//    func writeToDB() {
-//        let date = Date()
-//        let calendar = Calendar.current
-//        let hour = calendar.component(.hour, from: date)
-//        let minutes = calendar.component(.minute, from: date)
-//        let timeStamp = String(hour) + ":" + String(minutes)
-//
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference()
-//        
-//        ref.child("song_3").setValue("snow")
-//        ref.child("time_3").setValue(timeStamp)
-//    }
     
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
        print("logged in")
@@ -93,11 +86,38 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
             })
     }
     
+    public func setRoom(room: Room) {
+        self.room = room
+    }
+    
+    static func playSong(songID: String) {
+        
+    }
+    
+    private func playSong(_ audioStreaming: SPTAudioStreamingController!, songID: String) {
+        self.player?.playSpotifyURI("spotify:track:" + songID, startingWith: 0, startingWithPosition: 0, callback: { (error) in
+                if (error != nil) {
+                    print("playing!")
+                }
+        })
+    }
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
         if UIApplication.shared.openURL(loginUrl!) {
             if auth.canHandle(auth.redirectURL) {
                 // error
             }
+        }
+    }
+    
+    internal override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "spotifyLoggedInSegue"){
+            let secondViewController = segue.destination as! CreateRoomViewController
+            secondViewController.setSpotifyAccessToken(spotifyAccessToken: session.accessToken as String)
+            secondViewController.setRoom(room: room)
+            secondViewController.backFromSpotify()
+            print("set access token in Spotify to: ", session.accessToken)
+//            secondViewController.setSpotifyRefreshToken(spotifyRefreshToken: session.encryptedRefreshToken)
         }
     }
 }

@@ -19,7 +19,6 @@ class UserTypeViewController: UIViewController {
         super.viewDidLoad()
 
         userTypePickerView.delegate = userTypePickerDelegate
-        // Do any additional setup after loading the view.
     }
 
     private func returnRowForChosenState() -> Int {
